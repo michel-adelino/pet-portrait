@@ -11,15 +11,13 @@ const getScaledPrintableArea = (containerWidth: number) => {
   const baseWidth = 500;
   const scale = containerWidth / baseWidth;
 
-  const areaHeight = 192 * scale;
-  const areaWidth = areaHeight * (748 / 500);
+  // Rectangle ratio width/height = 825/553
+  const areaHeight = 200 * scale;
+  const areaWidth = areaHeight * (825 / 553);
   return {
-    scale,
-    width: containerWidth,
-    height: 500 * scale,
-    printableArea: {
-      top: 144 * scale,
-      left: 125 * scale,
+    front: {
+      top: 135 * scale,
+      left: 110 * scale,
       width: areaWidth,
       height: areaHeight,
     }
